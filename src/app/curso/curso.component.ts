@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-curso',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursoComponent implements OnInit {
 
+  cursoAtual: String = "";
+
+  curso: any = {
+    nome: null,
+    descricao: null,
+    email:null
+  }
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  cursoTurma(valor: String){
+    this.cursoAtual = valor;
+
+  }
+
+  onSubmit(formulario: NgForm){
+    if(formulario.valid){
+    console.log('valores do formulário');
+    console.log(formulario.form.value);
+
+    console.log('Valor do objeto');
+    console.log(this.curso);
+    }
+  }
 }
