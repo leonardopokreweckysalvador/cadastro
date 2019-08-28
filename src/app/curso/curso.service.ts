@@ -5,5 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class CursoService {
 
+  cursos: any[] = [];
+
   constructor() { }
+
+  salvar(curso: any){
+    this.cursos.push(curso);
+  }
+
+  getCursos(){
+    return this.cursos;
+  }
+  
 }
