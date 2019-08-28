@@ -4,17 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AlunoComponent } from './aluno/aluno.component';
 import { CursoComponent } from './curso/curso.component';
+//importar modulo de forms (formulario)
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlunoComponent,
-    CursoComponent
+    CursoComponent,
+    AlunoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
