@@ -34,10 +34,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td  *ngFor="let mostrar of getCursos()">{{mostrar.nomeCurso}}</td>
-                <td *ngFor="let mostrar2 of getCursos()">{{mostrar2.descricao}}</td>
-                <td *ngFor="let mostrar3 of getCursos()">{{mostrar3.periodo}}</td>
+            <tr *ngFor="let mostrar of getCursos()">
+                <td >{{mostrar.nomeCurso}}</td>
+                <td >{{mostrar.descricao}}</td>
+                <td >{{mostrar.periodo}}</td>
             </tr>
         </tbody>
     </table>
