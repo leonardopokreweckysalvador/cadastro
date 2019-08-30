@@ -24,6 +24,7 @@
         <button type="submit" class="btn btn-dark">Cadastrar</button>
     </form>
     <h1>Alunos cadastrados</h1>
+  
     <table class="table">
         <thead>
             <tr>
@@ -34,15 +35,10 @@
         </thead>
         <tbody>
             <tr>
-                <!-- <td  </td>*ngFor="let alunoAtual of getAlunos()">{{alunoAtual}}</td> -->
-                <td></td>
-                <td></td>
+                <td *ngFor="let alunoAtual of getAlunos()">{{alunoAtual.nome}}</td>
+                <td *ngFor="let alunoAtual1 of getAlunos()">{{alunoAtual1.telefone}}</td>
+                <td *ngFor="let alunoAtual2 of getAlunos()">{{alunoAtual2.email}}</td>
             </tr>
         </tbody>
     </table>
-    <!--<ul>
-      <li *ngFor="let alunoAtual of getAlunos()">
-        {{alunoAtual}}
-      </li>
-    </ul>-->
 </div>
