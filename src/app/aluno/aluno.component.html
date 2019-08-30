@@ -34,10 +34,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td *ngFor="let alunoAtual of getAlunos()">{{alunoAtual.nome}}</td>
-                <td *ngFor="let alunoAtual1 of getAlunos()">{{alunoAtual1.telefone}}</td>
-                <td *ngFor="let alunoAtual2 of getAlunos()">{{alunoAtual2.email}}</td>
+            <tr *ngFor="let alunoAtual of getAlunos()">
+                <td >{{alunoAtual.nome}}</td>
+                <td >{{alunoAtual.telefone}}</td>
+                <td >{{alunoAtual.email}}</td>
             </tr>
         </tbody>
     </table>
