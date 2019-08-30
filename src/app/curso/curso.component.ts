@@ -32,8 +32,11 @@ export class CursoComponent implements OnInit {
 
       this.service.salvar(this.curso)
       this.curso = new Object();
-      this.cursos =  this.service.getCursos();
+      //this.cursos =  this.service.getCursos();
     }
+  }
+  getCursos(){
+    return this.service.getCursos();
   }
 
 }
