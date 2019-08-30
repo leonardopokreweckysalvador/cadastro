@@ -24,4 +24,21 @@
         <button type="submit" class="btn btn-dark">Submeter </button>
 
     </form>
+  
+  <table class="table">
+        <thead>
+            <tr>
+                <th>Nome:</th>
+                <th>Descrição:</th>
+                <th>Período:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td  *ngFor="let mostrar of getCursos()">{{mostrar.nomeCurso}}</td>
+                <td *ngFor="let mostrar2 of getCursos()">{{mostrar2.descricao}}</td>
+                <td *ngFor="let mostrar3 of getCursos()">{{mostrar3.periodo}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
