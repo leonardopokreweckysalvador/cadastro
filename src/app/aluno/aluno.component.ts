@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Form, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { AlunoService } from './aluno.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { AlunoService } from './aluno.service';
 export class AlunoComponent implements OnInit {
 
   private aluno: any; //= { nome: null, telefone: null, email: null };
-  //alunoLista: string[] = [];
+  alunoLista: string[] = [];
 
   constructor(private service: AlunoService) { }
 
@@ -18,19 +18,17 @@ export class AlunoComponent implements OnInit {
     this.aluno = new Object();
   }
 
-  onSubmit(myForm: NgForm) {
-    if (myForm.valid) {
+  onSubmit(formularioAluno: NgForm) {
+    if (formularioAluno.valid) {
 
       /*console.log('--- valores do formulario');
       console.log(myForm.form.value);
       console.log('--- Lista de alunos');*/
-      console.log(this.aluno.nome);
-
-      this.service.salvar(this.aluno);
-      this.aluno = new Object();
-      //this.alunoLista = this.service.getAlunos();
-
       console.log(this.aluno);
+      this.service.salvar(this.aluno);
+      this.alunoLista = this.service.getAlunos();
+      this.aluno = new Object();
+      
 
     }
   }

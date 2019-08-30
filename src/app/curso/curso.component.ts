@@ -25,8 +25,8 @@ export class CursoComponent implements OnInit {
 
   }
 
-  onSubmit(formulario: NgForm) {
-    if (formulario.valid) {
+  onSubmit(formularioCurso: NgForm) {
+    if (formularioCurso.valid) {
   
       console.log(this.curso);
 

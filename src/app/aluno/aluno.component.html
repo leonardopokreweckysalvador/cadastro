@@ -1,28 +1,31 @@
 <div class="container">
-    <form #formulario="ngForm" (ngSubmit)="onSubmit(formulario)" class="form-horizontal">
+    <form #formularioAluno="ngForm" (ngSubmit)="onSubmit(formularioAluno)" class="form-horizontal">
+        
         <div class="form-group row">
             <div class="col-sm-6">
                 <label for="nome" class="control-label">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome" required #nome="ngModel"
-                    [(ngModel)]="alunos.nome">
+                <input  type="text" name="nomeAluno" id="nomeAluno" class="form-control" required #nomeAluno="ngModel" [(ngModel)]="alunos.nomeAluno">
             </div>
         </div>
+       
         <div class="form-group row">
             <div class="col-sm-6">
-                <label for="telefone" class="control-label">Telefone</label>
-                <input type="tel" tel class="form-control" id="telefone" name="telefone" required #telefone="ngModel"
-                    [(ngModel)]="alunos.telefone">
+                <label for="telefoneAluno" class="control-label">Telefone:</label>
+                <input type="tel" tel class="form-control" id="telefoneAluno" name="telefoneAluno" required #telefoneAluno="ngModel" [(ngModel)]="alunos.telefoneAluno">
             </div>
         </div>
+      
         <div class="form-group row">
             <div class="col-sm-6">
-                <label for="email" class="control-label">E-mail</label>
-                <input type="email" email class="form-control" id="email" name="email" required #email="ngModel"
-                    [(ngModel)]="alunos.email">
+                <label for="emailAluno" class="control-label">E-mail:</label>
+                <input type="email" email class="form-control" id="emailAluno" name="emailAluno" required #emailAluno="ngModel" [(ngModel)]="alunos.emailAluno">
             </div>
         </div>
+       
         <button type="submit" class="btn btn-dark">Cadastrar</button>
+   
     </form>
+   
     <h1>Alunos cadastrados</h1>
   
     <table class="table">
@@ -35,9 +38,9 @@
         </thead>
         <tbody>
             <tr *ngFor="let alunoAtual of getAlunos()">
-                <td >{{alunoAtual.nome}}</td>
-                <td >{{alunoAtual.telefone}}</td>
-                <td >{{alunoAtual.email}}</td>
+                <td >{{alunoAtual.nomeAluno}}</td>
+                <td >{{alunoAtual.telefoneAluno}}</td>
+                <td >{{alunoAtual.emailAluno}}</td>
             </tr>
         </tbody>
     </table>
