@@ -12,6 +12,7 @@ export class AlunoComponent implements OnInit {
   private aluno: any; //= { nome: null, telefone: null, email: null };
   alunoLista: string[] = [];
 
+
   constructor(private service: AlunoService) { }
 
   ngOnInit() {
@@ -28,12 +29,15 @@ export class AlunoComponent implements OnInit {
       this.service.salvar(this.aluno);
       this.alunoLista = this.service.getAlunos();
       this.aluno = new Object();
-      
 
     }
   }
 
   getAlunos(){
+    
+    
     return this.service.getAlunos();
+    
   }
+
 }
