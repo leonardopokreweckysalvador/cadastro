@@ -8,6 +8,7 @@ import { CursoComponent } from './curso/curso.component';
 
 import { AlunoService } from './aluno/aluno.service';
 import { CursoService } from './curso/curso.service';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -20,7 +21,8 @@ import { CursoService } from './curso/curso.service';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
 
   providers: [AlunoService, CursoService],

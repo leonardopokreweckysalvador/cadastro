@@ -18,6 +18,7 @@ export class CursoComponent implements OnInit {
 
   ngOnInit() {
     this.curso = new Object();
+    this.cursos =  this.service.getCursos();
   }
 
   cursoTurma(valor: String) {
